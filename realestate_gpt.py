@@ -7,9 +7,11 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+
 class RealEstateGPT():
     def __init__(self, openai_api_key=OPENAI_API_KEY, one_shot=True):
-        os.environ["OPENAI_API_KEY"] = openai_api_key
+        # os.environ["OPENAI_API_KEY"] = openai_api_key
         file_path = 'prompts.json'
         with open(file_path, 'r') as file:
             data = json.load(file)
